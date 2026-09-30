@@ -39,7 +39,7 @@ void Car::refuel(double gallons)
 
 void Car::drive(double distance)
 {
-    int dist = mpg * fuel_level < distance ? distance : mpg * fuel_level;
+    int dist;
     if(mpg * fuel_level < distance)
     {
         dist = mpg * getFuelLevel;
@@ -48,11 +48,8 @@ void Car::drive(double distance)
     else
     {
         dist = distance;
-        for(int i = distance; i > 0; i -= mpg)
-        {
-            setFuelLevel(fuel_level - 1);
-        }
+        setFuelLevel(fuel_level - (dist / mpg))
     }
     std::cout << "Distance Covered: " << dist << "(" << distance - dist << "miles left\n";
-    std::cout << "Fuel Level: " << fuel_level
+    std::cout << "Fuel Level: " << fuel_level << " gallons";
 }
