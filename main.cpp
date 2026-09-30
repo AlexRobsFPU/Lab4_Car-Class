@@ -4,6 +4,15 @@
 
 int main(void) {
     // Create toyota object
+    Car toyota;
+
+    toyota.setMake("Toyota");
+    toyota.setModel("Corolla");
+    toyota.setYear(2020);
+    toyota.setMPG(23.2);
+    toyota.setFuellevel(12);
+
+    toyota.printInfo();
     
     
     toyota.refuel(5);
