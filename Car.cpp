@@ -33,11 +33,15 @@ void Car::refuel(double gallons)
 {
     std::cout << "Refueling...\n";
     std::cout << "Fuel added: " << gallons << " gallons\n";
-    
-    std::cout << "Fuel Level: " << getFuel_Level() << " gallons\n";
+    setFuelLevel(gallons);
+    std::cout << "Fuel Level: " << fuel_level << " gallons\n";
 }
 
 void Car::drive(double distance)
 {
-
+    while(fuel_level > 0 || distance > 0)
+    {
+        distance -= mpg;
+        setFuelLevel(fuel_level - 1);
+    }
 }
