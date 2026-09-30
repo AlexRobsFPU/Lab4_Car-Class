@@ -20,12 +20,16 @@ public:
     std::string getModel() const;
     int getYear() const;
     double getMPG() const;
+    double getFuelLevel() const;
 
 private:
     std::string make;
     std::string model;
     int year;
     double mpg;
+    double mileage;
+    double fuel_capacity;
+    double fuel_level;
 };
 
 #endif
