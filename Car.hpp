@@ -17,6 +17,7 @@ public:
     void setModel(const std::string& model);
     void setYear(int year);
     void setMPG(double MPG);
+    void setFuelLevel(double gallons);
 
     std::string getMake() const;
     std::string getModel() const;

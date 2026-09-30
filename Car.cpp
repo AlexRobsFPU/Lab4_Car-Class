@@ -8,18 +8,33 @@ void Car::printInfo() const
     std::cout << "Model: " << model << std::endl;
     std::cout << "Year: " << year << std::endl;
     std::cout << "MPG: " << mpg << std::endl;
-    std::cout << "Fuel: " << Car::getFuel_Level() << std::endl;
-    std::cout << "Miles: " << 
+    std::cout << "Fuel: " << getFuel_Level() << std::endl;
+    std::cout << "Miles: " << millage << std::endl;
 }
 
-int getFuel_Level()
+int getFuelLevel()
 {
+    return fuel_level;
+}
 
+void setFuelLevel(double gallons)
+{
+    if(getFuel_Level + gallons >= fuel_capacity)
+    {
+        fuel_level = fuel_capacity;
+    }
+    else
+    {
+        fuel_level += gallons;
+    }
 }
 
 void Car::refuel(double gallons)
 {
-
+    std::cout << "Refueling...\n";
+    std::cout << "Fuel added: " << gallons << " gallons\n";
+    
+    std::cout << "Fuel Level: " << getFuel_Level() << " gallons\n";
 }
 
 void Car::drive(double distance)
