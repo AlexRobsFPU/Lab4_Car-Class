@@ -10,6 +10,8 @@ public:
     
     //print method
     void printInfo() const;
+    void refuel(double gallons);
+    void drive(double distance);
 
     void setMake(const std::string& make);
     void setModel(const std::string& model);
