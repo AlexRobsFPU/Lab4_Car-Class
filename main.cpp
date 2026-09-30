@@ -10,7 +10,7 @@ int main(void) {
     toyota.setModel("Corolla");
     toyota.setYear(2020);
     toyota.setMPG(23.2);
-    toyota.setFuellevel(12);
+    toyota.setFuelLevel(12);
 
     toyota.printInfo();
     
